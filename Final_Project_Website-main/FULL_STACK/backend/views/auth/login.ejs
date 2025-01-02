@@ -10,7 +10,9 @@
     <title>Login</title>
     <style>
         body {
-            background-color: #f8f9fa;
+            background: linear-gradient(25deg, orange, black);
+            min-height: 100vh;
+            color: white;
         }
         .login-card {
             border-radius: 15px;
@@ -27,13 +29,15 @@
     </style>
 </head>
 <body>
-    <div class="all " style="background-color: lightpink;">
+    <div class="all ">
     <div class="container d-flex justify-content-center align-items-center vh-100 me-5" style="padding-right: 200px;">
         <div class="row">
         <h2 class="text-center mb-4 me-4">Welcome to Gym-Note for Today!</h2>
         <h6 style="text-align: center;">In our gym system,</h6>
         <h6 style="text-align: center;">Customer can Login and Register their account and arrange their gym schedule.</h6>
          </div>
+
+
         <div class="card p-4 shadow-lg login-card me-4" style="width: 100%; max-width: 400px;">
             <h3 class="text-center mb-4">Please! Login.</h3>
             <form action="/login" method="POST"  class="form">
@@ -60,13 +64,15 @@
                         placeholder="Enter your password" 
                         required
                     >
-                    <button class="mt-4 btn btn-success" style="margin-left:130px;" type="submit">Login</button>
-                    <a href="/register" style="margin-left: 123px;" class="link btn btn-primary mt-2">Register</a>
+                    <button class="mt-4 btn" style="margin-left:130px; background-color:orange;" type="submit">Login</button>
+                    <a href="/register" style="margin-left: 123px; background-color:black;" class="link btn btn-primary mt-2">Register</a>
                     <% if (error) { %>
                         <p class="error text-danger"><%= error %></p>
                         <% } %>
                     </div>
                 </div>
+         </form>
+        </div>
 
 </body>
 </html>

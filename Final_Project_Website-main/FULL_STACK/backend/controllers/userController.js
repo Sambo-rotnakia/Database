@@ -28,3 +28,12 @@ exports.logout = (req, res) => {
         res.redirect('/login');
     });
 };
+
+exports.delete = async (req, res) => {
+    try {
+      await User.delete(req.params.id);
+      res.redirect('/login');
+    } catch (err) {
+      res.status(500).send('Error deleting product');
+    }
+  };
