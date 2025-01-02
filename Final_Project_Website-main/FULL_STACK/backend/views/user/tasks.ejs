@@ -54,12 +54,11 @@
 
         <!-- Task List -->
         <div class="row">
-            <% let i=1 %>
             <% tasks.forEach(task => { %>
                 <div class="col-md-4">
                     <div class="card shadow-sm">
                         <div class="card-body" >
-                            <h5 class="card-title fw-bold text-dark fs-2 mt-2"> <% i++ %> <%= task.title %></h5>
+                            <h5 class="card-title fw-bold text-dark fs-2 mt-2"> <%= task.title %></h5>
                             <p class="card-text text-muted"><%= task.description %></p>
                             <form action="/tasks/delete/<%= task.id %>" method="POST" style="display:inline;">
                                 <button class="btn btn-danger btn-sm" style="margin-top: 100px;" type="submit">Delete</button>
